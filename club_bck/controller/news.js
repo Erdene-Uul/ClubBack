@@ -1,6 +1,6 @@
 const News = require("../models/News");
-const MyError = require('../utils/myError');
-const asyncHandler = require('../middleware/asyncHandler');
+const MyError = require("../utils/myError");
+const asyncHandler = require("../middleware/asyncHandler");
 
 exports.getNews = asyncHandler(async (req, res, next) => {
   const news = await News.find();
@@ -12,7 +12,6 @@ exports.getNews = asyncHandler(async (req, res, next) => {
 });
 
 exports.getContent = asyncHandler(async (req, res, next) => {
-
   const content = await News.findById(req.params.id);
 
   if (!content) {
@@ -37,7 +36,6 @@ exports.createContent = asyncHandler(async (req, res, next) => {
 });
 
 exports.updateContent = asyncHandler(async (req, res, next) => {
-
   const content = await News.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
@@ -54,7 +52,6 @@ exports.updateContent = asyncHandler(async (req, res, next) => {
 });
 
 exports.deleteContent = asyncHandler(async (req, res, next) => {
-
   const content = await News.findByIdAndDelete(req.params.id);
 
   if (!content) {

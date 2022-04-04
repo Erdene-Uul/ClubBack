@@ -1,12 +1,10 @@
 const express = require("express");
 
-const {
-  createUser
-} = require("../controller/users");
+const { createUser, getUsers } = require("../controller/users");
 
 const router = express.Router();
 
 //"/api/v1/categories"
-router.route("/").post(createUser);
+router.route("/").post(createUser).get(getUsers);
 
 module.exports = router;

@@ -1,0 +1,4 @@
+::1 - - [04/Apr/2022:13:07:27 +0000] "GET /api/v1/news HTTP/1.1" 200 26 "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Mobile Safari/537.36"
+::1 - - [04/Apr/2022:13:07:27 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:9000/api/v1/news" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Mobile Safari/537.36"
+::1 - - [04/Apr/2022:13:07:50 +0000] "GET /api/v1/news HTTP/1.1" 304 - "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Mobile Safari/537.36"
+::1 - - [04/Apr/2022:13:07:59 +0000] "GET /api/v1/users HTTP/1.1" 200 717 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36"

@@ -3,13 +3,13 @@ const dotenv = require("dotenv");
 var path = require("path");
 var rfs = require("rotating-file-stream");
 const connectDB = require("./config/db");
-const errorHandler = require('./middleware/error');
+const errorHandler = require("./middleware/error");
 var morgan = require("morgan");
 const logger = require("./middleware/logger");
 const newsRoutes = require("./routes/news");
-const userRoutes = require('./routes/users');
-const color = require('colors');
-const cors = require('cors');
+const userRoutes = require("./routes/users");
+const color = require("colors");
+const cors = require("cors");
 
 // Аппын тохиргоог process.env рүү ачаалах
 dotenv.config({ path: "./config/config.env" });
@@ -18,19 +18,13 @@ const app = express();
 
 connectDB();
 
-
-
-
 // Router оруулж ирэх
-
 
 // create a write stream (in append mode)
 var accessLogStream = rfs.createStream("access.log", {
   interval: "1d", // rotate daily
   path: path.join(__dirname, "log"),
 });
-
-
 
 // Body parser
 app.use(cors());
